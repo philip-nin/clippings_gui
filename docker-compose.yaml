@@ -1,0 +1,12 @@
+version: '2'
+services:
+  selenium_firefox:
+    image: selenium/standalone-firefox:103.0 #selenium/standalone-firefox:89.0-20210618
+  tests:
+    build: .
+    depends_on:
+      - "selenium_firefox"
+    volumes:
+      - ./reports:/test_code/reports
+      - /dev/shm:/dev/shm
+    shm_size: '1g'

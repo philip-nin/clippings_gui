@@ -1,0 +1,8 @@
+pytest
+selenium
+pytest-selenium
+requests
+lxml
+cssselect
+py
+pytest-logger
